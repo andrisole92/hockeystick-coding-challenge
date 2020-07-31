@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React from 'react';
 import {Preview} from "./components/Preview";
-import './App.css';
 import {Downloader} from "./components/Downloader";
+
+import './App.css';
 
 class App extends React.Component {
     constructor(props) {
@@ -14,21 +15,9 @@ class App extends React.Component {
             transformedImageUrl: null
         }
 
-        this.downloadImage = this.downloadImage.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.submitForm = this.submitForm.bind(this)
         window['co'] = this;
-    }
-
-    async downloadImage() {
-            // const a = document.createElement("a");
-            // a.href = this.state.transformedImageUrl;
-            // a.download = this.state.transformedImageUrl.substr(this.state.transformedImageUrl.lastIndexOf('/'));
-            // document.body.appendChild(a);
-            // a.click();
-            // document.body.removeChild(a);
-        // window.open(this.state.transformedImageUrl, 'Download');
-
     }
 
     handleChange(event) {
@@ -56,7 +45,6 @@ class App extends React.Component {
     render() {
         return (
             <div className={'app'}>
-
                 <form onSubmit={this.submitForm}>
                     <label className={'btn'}>
                         Upload Image

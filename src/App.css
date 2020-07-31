@@ -35,45 +35,12 @@ img {
     padding: 1em;
 }
 
-/*button, .btn, select {*/
-/*    user-select: none;*/
-/*    outline: none;*/
-/*    box-shadow: none;*/
-/*    background: blue;*/
-/*    border: 1px solid blue;*/
-/*    color: white;*/
-/*    border-radius: 4px;*/
-/*    transition: all .15s ease-in;*/
-/*    padding: 12px;*/
-/*    cursor: pointer;*/
-/*    margin: 12px;*/
-/*    line-height: 1rem !important;*/
-/*    font-size: 1rem;*/
-/*}*/
+label {
+    margin: 0 4px;
+    background: gray;
+    color: white;
 
-/*button:hover, .btn:hover, select:hover {*/
-/*    background: transparent;*/
-/*    color: blue;*/
-/*}*/
-
-/*button:disabled {*/
-/*    opacity: .5 !important;*/
-/*}*/
-/*button:disabled:hover {*/
-/*    border: 1px solid blue;*/
-/*    background: blue;*/
-/*    color: white;*/
-/*}*/
-
-/*select {*/
-/*    margin: 12px;*/
-
-/*    background: blue;*/
-/*    padding: 12px;*/
-/*    border-radius: 4px;*/
-/*    border: 1px solid blue;*/
-/*    color: white;*/
-/*    cursor: pointer;*/
-/*    !*border-right: 5px solid blue;*!*/
-/*    !*border-left: 5px solid blue;*!*/
-/*}*/
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+}
