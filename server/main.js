@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.listen(8081)
 
-app.post('/transform', async (req, res, next) => {
+app.post('/image/convert', async (req, res, next) => {
     const supportedImageTypes = ['image/png', 'image/jpg', 'image/jpeg', 'image/bmp'];
     const imageTypeToExtensionHash = {
         'image/png': 'png',
