@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React from 'react';
-import './App.css';
 import {Preview} from "./components/Preview";
+import './App.css';
+import {Downloader} from "./components/Downloader";
 
 class App extends React.Component {
     constructor(props) {
@@ -20,12 +21,12 @@ class App extends React.Component {
     }
 
     async downloadImage() {
-        const a = document.createElement("a");
-        a.href = this.state.transformedImageUrl;
-        a.download = this.state.transformedImageUrl.substr(this.state.transformedImageUrl.lastIndexOf('/'));
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+            // const a = document.createElement("a");
+            // a.href = this.state.transformedImageUrl;
+            // a.download = this.state.transformedImageUrl.substr(this.state.transformedImageUrl.lastIndexOf('/'));
+            // document.body.appendChild(a);
+            // a.click();
+            // document.body.removeChild(a);
         // window.open(this.state.transformedImageUrl, 'Download');
 
     }
@@ -69,9 +70,7 @@ class App extends React.Component {
                         <option value={'image/png'}>PNG</option>
                     </select>
                     <button type={'button'} onClick={this.submitForm}>Upload & Transform</button>
-                    <button type={'button'} onClick={this.downloadImage}
-                            disabled={!this.state.transformedImageUrl}>Download
-                    </button>
+                    <Downloader transformedImageUrl={this.state.transformedImageUrl}/>
                 </form>
                 <Preview original={this.state.preview} transformed={this.state.transformedImageUrl}/>
             </div>

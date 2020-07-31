@@ -50,7 +50,7 @@ app.post('/transform', async (req, res, next) => {
 
         let originalFilePath = `${__dirname}/files/${files.image.name}`;
 
-        let jimpObject = await Jimp.read(originalFilePath);
+        let jimpObject = await Jimp.read(files.image.path);
         // get extensions we want to transform to
         let transformedFileExtensions = imageTypeToExtensionHash[fields.ext];
         //save path
