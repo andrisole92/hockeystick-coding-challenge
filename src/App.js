@@ -35,7 +35,7 @@ class App extends React.Component {
         formData.append('image', file);
         formData.append('ext', ext);
 
-        let res = await axios.post(`${serverUrl}/transform`, formData);
+        let res = await axios.post(`${serverUrl}/image/convert`, formData);
         console.log(res);
         if (!res.error) {
             this.setState({transformedImageUrl: res.data.url})
